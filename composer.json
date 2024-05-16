@@ -1,34 +1,19 @@
 {
     "name": "sohagsrz/instagram-media-downloader",
-    "type": "library",
     "description": "A PHP library to download Instagram media.",
-    "keywords": [
-      "instagram",
-      "api",
-      "php", 
-      "sdk"
-    ],
-    "homepage": "https://github.com/sohagsrz/instagram-media-downloader",
+    "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "InstagramMediaDownloader\\": "src/"
+        }
+    },
     "authors": [
         {
-          "name": "Md Sohag Islam",
-          "email": "mdsohagislam25@gmail.com"
-        },
-        {
-          "name": "Rasel Islam",
-          "email": "raselsdp@gmail.com"
+            "name": "sohagsrz",
+            "email": "shaadv37@gmail.com"
         }
-      ],
-
-      "require": {
-        "php": ">=7.2.5"
-      },
-      
-
-  "autoload": {
-    "psr-4": {
-      "InstagramMedia\\": "src/InstagramMedia/"
-    }
-  }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
 }

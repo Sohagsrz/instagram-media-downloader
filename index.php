@@ -1,6 +1,7 @@
 <?php 
+
 include 'vendor/autoload.php'; 
-use InstagramMedia\Downloader;
+use InstagramMediaDownloader\Downloader;
 $downloader = new Downloader();
  
 var_dump(

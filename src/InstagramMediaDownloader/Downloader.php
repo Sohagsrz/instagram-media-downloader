@@ -1,5 +1,5 @@
 <?php 
-namespace InstagramMedia;
+namespace InstagramMediaDownloader;
 
 class Downloader
 {
