@@ -3,6 +3,8 @@
     "description": "A PHP library to download Instagram media.",
     "type": "library",
     "license": "MIT",
+    
+  "homepage": "https://github.com/sohagsrz/instagram-media-downloader",
     "autoload": {
         "psr-4": {
             "InstagramMediaDownloader\\": "src/"
@@ -14,6 +16,5 @@
             "email": "shaadv37@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {}
 }
