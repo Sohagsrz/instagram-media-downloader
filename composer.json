@@ -6,7 +6,7 @@
     "homepage": "https://github.com/sohagsrz/instagram-media-downloader",
     "autoload": {
         "psr-4": {
-            "InstagramMediaDownloader\\": "src/"
+            "InstagramMediaDownloader\\": "src/InstagramMediaDownloader/"
         }
     },
     "authors": [
