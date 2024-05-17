@@ -15,5 +15,7 @@
             "email": "shaadv37@gmail.com"
         }
     ],
+    
+  "minimum-stability": "dev",
     "require": {}
 }
