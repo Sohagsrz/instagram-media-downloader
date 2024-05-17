@@ -1,9 +1,7 @@
 <?php 
 
 include 'vendor/autoload.php'; 
-use InstagramMediaDownloader\Downloader;
-$downloader = new Downloader();
- 
-var_dump(
-    $downloader->request('https://www.instagram.com/p/CS1J9Z2J9Z2/')
-);
+use InstagramMediaDownloader\ProfileDownloader;
+$profile = new ProfileDownloader();
+$result = $profile->getProfile('sohagsrz');
+var_dump($result);

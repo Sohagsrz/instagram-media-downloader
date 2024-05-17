@@ -102,4 +102,32 @@ class Downloader
     public function get_result() : array {
         return $this->result;
     }
+    // profile data
+    public function get_by_username($username){
+        $params = http_build_query(['query_hash' => 'c9100bf9110dd6361671f113dd02e7d6', 'variables' => json_encode([ 
+            'username' => $username,
+        ])]);
+        //random sub domains
+        $sub_domains = ['www','api','i'];
+        $rand_sub_domain = $sub_domains[array_rand($sub_domains)];
+        
+        // url build 
+        $url = 'https://'.$rand_sub_domain.'.instagram.com/graphql/query/?'. $params;
+        $data =  $this->request($url);
+        if($data['status'] == 200){
+            $data = json_decode($data['result'], true);
+            if(isset($data['data']['user']) && is_array($data['data']['user'])
+            && !is_null($data['data']['user'])){
+                $this->result = $data['data']['user'];
+            }else{
+                $this->status = 404;
+                $this->result = $data['result'];
+            }
+        }else{
+            $this->status = $data['status'];
+            $this->result = $data['result'];
+        }
+        
+        return $this->result;
+    }
 }
